@@ -1,0 +1,46 @@
+{
+  "name": "watch-size",
+  "version": "1.0.0",
+  "description": "Watch the size changes of a DOM element",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/watch-size",
+  "homepage": "https://github.com/jonathantneal/watch-size#readme",
+  "bugs": "https://github.com/jonathantneal/watch-size/issues",
+  "main": "index.iife.js",
+  "files": [
+    "index.iife.js"
+  ],
+  "scripts": {
+    "build:iife": "babel index.js | uglifyjs -c unsafe=true --mangle --output index.iife.js; gzip-size index.iife.js",
+    "prepublishOnly": "npm test",
+    "test": "echo 'Running tests...'; npm run test:js",
+    "test:js": "eslint *.js --cache --ignore-path .gitignore --quiet"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "browserify": "^16.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-dev": "^2.0.0",
+    "gzip-size-cli": "^2.1.0",
+    "pre-commit": "^1.2.2",
+    "uglify-js": "^3.4.1"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "dark",
+    "mode",
+    "modes",
+    "light",
+    "interface",
+    "css",
+    "media",
+    "query",
+    "queries"
+  ]
+}

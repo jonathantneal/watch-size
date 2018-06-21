@@ -1,0 +1,9 @@
+node_modules
+index.*.js
+package-lock.json
+*.log*
+.*
+!.babelrc
+!.editorconfig
+!.gitignore
+!.travis.yml
