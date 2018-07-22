@@ -16,7 +16,7 @@
 	return stop;
 
 	function test() {
-		stop();
+		unbind();
 
 		const width = element.offsetWidth;
 		const height = element.offsetHeight;
@@ -40,8 +40,13 @@
 		expand.addEventListener('scroll', test);
 	}
 
-	function stop() {
+	function unbind() {
 		shrink.removeEventListener('scroll', test);
 		expand.removeEventListener('scroll', test);
+	}
+
+	function stop() {
+		unbind();
+		element.removeChild(expand);
 	}
 };
