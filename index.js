@@ -6,7 +6,8 @@
 
 	let lastWidth, lastHeight;
 
-	shrink.style.cssText = shrinkChild.style.cssText = expand.style.cssText = expandChild.style.cssText = 'clip:rect(0 0 0 0);height:100%;left:0;overflow:hidden;position:absolute;top:0;transition:0s;width:100%;z-index:-1';
+	shrink.style.cssText = expand.style.cssText = 'height:100%;pointer-events:none;opacity:0;left:0;overflow:hidden;position:absolute;top:0;transition:0s;width:100%;z-index:-1';
+	shrinkChild.style.cssText = expandChild.style.cssText = 'display:block;height:100%;transition:0s;width:100%';
 	shrinkChild.style.width = shrinkChild.style.height = '200%';
 
 	element.appendChild(expand);
