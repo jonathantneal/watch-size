@@ -1,4 +1,4 @@
-(typeof self !== 'undefined' ? self : this).watchSize = (element, listener) => {
+export default (element, listener) => {
 	const expand = document.createElement('_');
 	const shrink = expand.appendChild(document.createElement('_'));
 	const expandChild = expand.appendChild(document.createElement('_'));
@@ -48,6 +48,7 @@
 
 	function stop() {
 		unbind();
+
 		element.removeChild(expand);
 	}
 };

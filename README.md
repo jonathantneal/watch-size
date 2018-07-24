@@ -18,7 +18,7 @@ npm install watch-size
 Use `watchSize()` to rewrite your queries:
 
 ```js
-import 'watch-size';
+import watchSize from 'watch-size';
 
 const stop = watchSize(
   document.querySelector('.box:nth-child(2)')
@@ -33,9 +33,9 @@ const stop = watchSize(
 The `watchSize` function attaches hidden, over-sized DOM elements to your
 target with `scroll` listeners that are triggered whenever the element resizes.
 This allows the listener to avoid polling, and to truly respond to size changes.
-This technique can be used back to Internet Explorer 9.
+This technique can be used in all browsers going back to Internet Explorer 9.
 
-The entire script is about 400 bytes.
+The entire script is about 400 bytes when minified and gzipped.
 
 [cli-img]: https://img.shields.io/travis/jonathantneal/watch-size.svg
 [cli-url]: https://travis-ci.org/jonathantneal/watch-size
