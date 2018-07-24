@@ -1,6 +1,6 @@
 {
   "name": "watch-size",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Watch the size changes of a DOM element",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "license": "CC0-1.0",
